@@ -1,0 +1,37 @@
+{% extends 'layouts/base_home.html' %}
+
+{% block title %} Service Department | Certified AutoBrokers {% endblock title %}
+
+{% block stylesheets %}
+    <style>
+           
+        
+    </style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- BOOTSTRAP FORM -->
+
+<div class="container d-flex justify-content-center mt-5" style="width: 25%;">
+    <div class="col mt-5">
+        <form action="Apicall" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td> vin_number</td>
+                <td><input type="text" name="vin_number" required></td>
+            </tr>
+            
+            <tr>
+                <td><button>Submit</button></td>
+            </tr>
+        </form>
+    </div>
+</div>
+
+<!-- END BOOTSTRAP FORM -->
+    
+
+
+{% endblock content %}
