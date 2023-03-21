@@ -24,7 +24,7 @@ def index(request):
 def home(request):    
     context ={}
     context["dataset"] = Blog.objects.all() 
-    return render(request, 'home/test.html', context)
+    return render(request, 'home/index.html', context)
     
 
     # return render(request, 'home/index.html', {})
