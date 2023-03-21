@@ -4,5 +4,10 @@ python-dotenv
 whitenoise
 django-admin-adminlte==1.0.5
 
+requests
+djongo
+djangorestframework
+pymongo==3.12.3
+
 # psycopg2-binary
 # mysqlclient
