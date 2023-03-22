@@ -34,13 +34,9 @@ def services(request):
 
 
 def test(request):    
-
     return render(request, "home/vinnum.html", {})
 
-# def validate(request):
-#    if request.method == 'POST':
-#       vin_number= request.POST["vin_number"]
-#       print(vin_number)
+
     
 
 
