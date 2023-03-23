@@ -139,23 +139,12 @@
                         <div class="detail-block custom-border"><span class="font-weight-bold detail-title">{{item.key}}:</span> <span class="float-right col"><noanswer>{{item.value}}</noanswer></span></div>
 
                     {% endfor %}
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">VIN:</span> <span class="float-right col"><noanswer>3KPC24A68LE106290</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Miles:</span> <span class="float-right col"><miles><span class='miles '>61,740</span></miles></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Engine:</span> <span class="float-right col"><noanswer>Regular Unleaded I-4 1.6 L/97</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Transmission:</span> <span class="float-right col"><noanswer>1-Speed CVT w/OD</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Drivetrain:</span> <span class="float-right col"><noanswer>FWD</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Seating Capacity:</span> <span class="float-right col"><noanswer>5</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Exterior:</span> <span class="float-right col"><span class="color-block" style="background: 1A2740"></span>Admiral Blue</span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Interior:</span> <span class="float-right col"><span class="color-block" style="background: "></span>Black</span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Stock:</span> <span class="float-right col"><noanswer>6103W</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Fuel Type:</span> <span class="float-right col"><noanswer>Gasoline Fuel</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">City MPG:</span> <span class="float-right col"><noanswer>33</noanswer></span></div>
-                    <div class="detail-block custom-border"><span class="font-weight-bold detail-title">Highway MPG:</span> <span class="float-right col"><noanswer>41</noanswer></span></div>
+                   
                 </div>
             </div>
         </section>
 
-
+        {% load static %}
             <a id="vehicle-equipment" class="vdp-anchor"></a>
             <section anchor="vehicle-equipment" class="vdp-section vdp-anchor" toc-section="Equipment">
                 <div class="container">
@@ -163,7 +152,7 @@
                     <div class="row mx-auto w-100 justify-content-center">
                             <div class="col-lg-4 p-1">
                                 <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal" aria-expanded="true" aria-controls="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal">
-                                            <img height="45" src="/assets/Options.svg" />
+                                    <img height="45" src="{% static 'assets/Options.svg' %}" />
                                     <br />
                                     <span class="h6">OPTIONS</span>
                                 </button>
@@ -341,7 +330,7 @@
                             </div>
                             <div class="col-lg-4 p-1">
                                 <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal" aria-expanded="true" aria-controls="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal">
-                                            <img height="45" src="/assets/Exterior Options.svg" />
+                                    <img height="45" src="{% static 'assets/Exterior Options.svg' %}" />
                                     <br />
                                     <span class="h6">EXTERIOR OPTIONS</span>
                                 </button>
@@ -426,7 +415,7 @@
                             </div>
                             <div class="col-lg-4 p-1">
                                 <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal" aria-expanded="true" aria-controls="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal">
-                                            <img height="45" src="/assets/Interior Options.svg" />
+                                    <img height="45" src="{% static 'assets/Interior Options.svg' %}" />
                                     <br />
                                     <span class="h6">INTERIOR OPTIONS</span>
                                 </button>
@@ -601,7 +590,7 @@
                             </div>
                             <div class="col-lg-4 p-1">
                                 <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal" aria-expanded="true" aria-controls="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal">
-                                            <img height="45" src="/assets/Mechanical Options.svg" />
+                                            <img height="45" src="{% static 'assets/Mechanical Options.svg' %}" />
                                     <br />
                                     <span class="h6">MECHANICAL OPTIONS</span>
                                 </button>
@@ -680,7 +669,7 @@
                             </div>
                             <div class="col-lg-4 p-1">
                                 <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal" aria-expanded="true" aria-controls="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal">
-                                            <img height="45" src="/assets/Safety Options.svg" />
+                                    <img height="45" src="{% static 'assets/Safety Options.svg' %}" />
                                     <br />
                                     <span class="h6">SAFETY OPTIONS</span>
                                 </button>
@@ -701,39 +690,14 @@
                                                         <div id="equipment-26fce707-1039-44f8-87fa-47e14527d964">
                                                             <h4>Safety</h4>
                                                             <ul>
-                                                                    <li>
-                                                                        ABS And Driveline Traction Control
-                                                                    </li>
-                                                                    <li>
-                                                                        Airbag Occupancy Sensor
-                                                                    </li>
-                                                                    <li>
-                                                                        Back-Up Camera
-                                                                    </li>
-                                                                    <li>
-                                                                        Curtain 1st And 2nd Row Airbags
-                                                                    </li>
-                                                                    <li>
-                                                                        Dual Stage Driver And Passenger Front Airbags
-                                                                    </li>
-                                                                    <li>
-                                                                        Dual Stage Driver And Passenger Seat-Mounted Side Airbags
-                                                                    </li>
-                                                                    <li>
-                                                                        Electronic stability control (ESC)
-                                                                    </li>
-                                                                    <li>
-                                                                        Low Tire Pressure Warning
-                                                                    </li>
-                                                                    <li>
-                                                                        Outboard Front Lap And Shoulder Safety Belts -inc: Rear Center 3 Point, Height Adjusters and Pretensioners
-                                                                    </li>
-                                                                    <li>
-                                                                        Rear child safety locks
-                                                                    </li>
-                                                                    <li>
-                                                                        Side Impact Beams
-                                                                    </li>
+                                                                {% for item in data.safetyFeatures %}
+                        
+                                                                <li>
+                                                                    {{item}}
+                                                                </li>
+
+                                                                {% endfor %}
+                                                                  
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -747,7 +711,7 @@
                             </div>
                             <div class="col-lg-4 p-1">
                                 <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal" aria-expanded="true" aria-controls="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal">
-                                            <img height="45" src="/assets/Misc Options.svg" />
+                                    <img height="45" src="{% static 'assets/Misc Options.svg' %}" />
                                     <br />
                                     <span class="h6">INSTALLED OPTIONS</span>
                                 </button>
