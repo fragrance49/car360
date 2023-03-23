@@ -120,10 +120,9 @@
             <div class="container">
                 <h1 class="h1 vdp-section-title">Key Features</h1>
                 <ul class="text-center list-inline list-unstyled">
-                        <li class="h5 mx-5 list-inline-item">Bluetooth</li>
-                        <li class="h5 mx-5 list-inline-item">Backup Camera</li>
-                        <li class="h5 mx-5 list-inline-item">A/C</li>
-                        <li class="h5 mx-5 list-inline-item">Power Windows</li>
+                    {% for item in data.entertainmentFeatures %}
+                        <li class="h5 mx-5 list-inline-item">{{item}}</li>                    
+                    {% endfor %}
                 </ul>
 
             </div>
