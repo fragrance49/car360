@@ -8,5 +8,7 @@ urlpatterns = [
     path('test', views.test, name='test'),
     path('Apicall',views.Apicall,name="Apicall"),
     path('Vehicles', views.home, name='home'),
+    path('details/<str:pk>', views.details, name='details'),
+    # path('tuorials/<int:pk>', views.tutorial_detail, name = 'tutorial_detail'),
     path('service-department/', views.services, name='services'),
 ]

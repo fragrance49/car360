@@ -11,67 +11,243 @@
 {% endblock stylesheets %}
 
 {% block content %}
-
-<!-- Vehicle results area -->
-<div class="main vehicle-area">
-    <div class="vehicle-list">
-        <div class="vehicle-page w-100" id="page-1">
-            <div id="page-1" class="decorated w-100 page-marker" style="display:none;"></div>
-                {% for data in dataset %}
-                    
-                <div id="vehicle-1338" class="card vehicle-item" data-make="Ford" data-model="Ranger" data-year="2019" data-vin="1FTER4FH0KLA77680" data-thumbnail="https://content.homenetiol.com/2001243/2159366/0x0/49b4af938c2d428da1e0d5fb36a7af34.jpg" data-price="31933" data-id="1338">
-                    <button class="btn btn-sm favorite-button" data-id="1338"><i class="fas fa-heart"></i></button>
-                    <span class="view-counter "><i class="far fa-eye mr-2"></i>873</span>
-                    <a href="{{data.src}}" target="_blank">
-                    <!-- <a href="https://idrivecertified.com/Vehicles/Details/2019-Ford-Ranger-1FTER4FH0KLA77680"> -->
-                    <img class="w-100 card-img-top" src='{{ data.thumb }}'   data-xblocker="passed" style="visibility: visible;">
-                    </a>
-                    <div class="card-body p-2">
-                        
-                        <div class="row w-100 mx-auto details p-0">
-                               
-                            <div class="p-0">   
-                                {% for item in data.fields %}
-                                    {% if item.key == 'make' %}   
-                                    <span class="vehicle-result-title">  
-                                        {{ item.value }}   
-                                    </span>                                    
-                                    {% elif item.key == 'model' %}
-                                    <span class="vehicle-result-model text-secondary">{{ item.value }}  </span>
-                                    {% endif %}  
-                                {% endfor %}
-                            </div>
-
-                            <div class="p-0 text-right mb-2">
-                                {% for item in data.fields %}
-                                    {% if item.key == 'price' %}  
-                                    <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">${{ item.value }} </span>
-                                    {% elif item.key == 'mileage' %}
-                                    <span class="d-block vehicle-result-miles"> {{ item.value }} miles</span>
-                                    {% endif %}  
-                                {% endfor %}
-                            </div>
-                            <div class="col-12 p-0 more">
-                                <span class="vehicle-result-vin">Stock: 5429P</span>
-                                <span class="vehicle-result-color"><span class="color-sample" style="background: #000"></span>Black interior</span>
-                            </div>
-                                
-                            
-                        </div>
+<div id="inventory-menu">
+    <!-- Scroll Top Menu -->
+    <!-- Scroll Top Menu -->
+    <div class="scroll-top-menu light" style="z-index: 5;">
+        <div class="row w-100 mx-auto h-100 align-items-center justify-content-center">
+            <div class="desktop-tools left row p-0 align-items-center col-auto px-3">
+                <span class="font-weight-bold text-center d-block col vehicle-results"><span class="result-count" data-results-counter="">91</span> Vehicles Found</span>
+                <div class="dropdown mx-auto col-auto">
+                    <button class="btn btn-link dropdown-toggle srp-sort-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Order: <span class="sort-selection font-weight-bold text-capitalize">Default</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item sort-option" data-value="0" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Default</a>
+                        <a class="dropdown-item sort-option" data-value="1" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">New Arrivals</a>
+                        <a class="dropdown-item sort-option" data-value="2" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Highest Price</a>
+                        <a class="dropdown-item sort-option" data-value="3" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Lowest Price</a>
+                        <a class="dropdown-item sort-option" data-value="4" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Make &amp; Model</a>
+                        <a class="dropdown-item sort-option" data-value="5" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Newest Year</a>
+                        <a class="dropdown-item sort-option" data-value="6" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Lowest Miles</a>
                     </div>
-                    <div class="card-footer d-flex align-items-center d-inline">
-                        <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
-                        <span class="estimated-payment w-100">Estimated Payment: <span class="price float-right">$<span class="value" data-principal="31933">481</span>/mo</span></span>
-                    </div>
-               
                 </div>
-                {% endfor %}
             </div>
+            <div class="middle col p-0">
+                <div class="input-group">
+                    <input id="SRPSearchInput" type="text" class="search-input form-control m-0 py-4" placeholder="Search by make, model, year, features...">
+                    <div class="input-group-append border">
+                        <div class="filters-display-preview"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right col-auto">
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle srp-sort-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Order: <span class="sort-selection font-weight-bold text-capitalize">Default</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                        <a class="dropdown-item sort-option" data-value="0" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Default</a>
+                        <a class="dropdown-item sort-option" data-value="1" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">New Arrivals</a>
+                        <a class="dropdown-item sort-option" data-value="2" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Highest Price</a>
+                        <a class="dropdown-item sort-option" data-value="3" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Lowest Price</a>
+                        <a class="dropdown-item sort-option" data-value="4" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Make &amp; Model</a>
+                        <a class="dropdown-item sort-option" data-value="5" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Newest Year</a>
+                        <a class="dropdown-item sort-option" data-value="6" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Lowest Miles</a>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+        <div id="backToTop" class="p-1">
+            <button id="backToTopButton" class="btn btn-outline-primary"><i class="fas fa-arrow-up"></i> Back to Top</button>
+        </div>
     </div>
-    
+    <div class="mobile-results w-100" style="display:none;">
+        <div class="row w-100 align-items-center justify-content-center text-center">
+            <div class="col-6 p-0">
+                <span class="font-weight-bold text-center d-block text-center col vehicle-results"><span class="result-count" data-results-counter="">91</span> Results</span>
+            </div>
+            <div class="col-6 p-0">
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle srp-sort-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Order: <span class="sort-selection font-weight-bold text-capitalize">Default</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item sort-option" data-value="0" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Default</a>
+                        <a class="dropdown-item sort-option" data-value="1" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">New Arrivals</a>
+                        <a class="dropdown-item sort-option" data-value="2" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Highest Price</a>
+                        <a class="dropdown-item sort-option" data-value="3" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Lowest Price</a>
+                        <a class="dropdown-item sort-option" data-value="4" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Make &amp; Model</a>
+                        <a class="dropdown-item sort-option" data-value="5" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Newest Year</a>
+                        <a class="dropdown-item sort-option" data-value="6" href="https://idrivecertified.com/Vehicles?search=&amp;page=1&amp;order=0&amp;startYear=1950&amp;endYear=2022&amp;startPrice=0&amp;endPrice=1000000&amp;startMiles=0&amp;endMiles=1000000#">Lowest Miles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Desktop side bar menu -->
+    <div class="menu-sidebar" style="margin-top: 90px;">
+        <div class="menu-filters">
+            <div data-year-sidebar class="filter-group my-1 card w-100">
+                <div class="year-filter mx-3 my-1">
+                    <label class="mb-2">Year</label>
+                    <div id="yearSlider"></div>
+                    <span data-start-year-counter class="float-left"></span>
+                    <span data-end-year-counter class="float-right"></span>
+                </div>
+            </div>
+            <div data-price-sidebar class="filter-group my-1 card w-100">
+                <div class="price-filter mx-3 my-1">
+                    <label class="mb-2">Price</label>
+                    <div id="priceSlider"></div>
+                    <span data-start-price-counter class="float-left"></span>
+                    <span data-end-price-counter class="float-right"></span>
+                </div>
+            </div>
+            <div data-mile-sidebar class="filter-group my-1 card w-100">
+                <div class="mile-filter mx-3 my-1">
+                    <label class="mb-2">Miles</label>
+                    <div id="mileSlider"></div>
+                    <span data-start-mile-counter class="float-left"></span>
+                    <span data-end-mile-counter class="float-right"></span>
+                </div>
+            </div>
+            <div class="toggle-filters">
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-make-menu]">
+                        Makes
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-type-menu]">
+                        Body
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-model-menu]">
+                        Models
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-drivetrain-menu]">
+                        Drive Trains
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-fuel-menu]">
+                        Fuel Types
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-extcolor-menu]">
+                        Ext. Color
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-keyfeatures-menu]">
+                        Key Features
+                    </button>
+                </div>
+                <div data-hide-in-mobile-mode class="filter-group">
+                    <button class="btn btn-block"
+                            data-independent="true"
+                            data-toggle="modal"
+                            data-target="#filterModal"
+                            data-menu-target="[data-tag-menu]">
+                        Tags
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vehicle results area -->
+    <div class="main vehicle-area">
+        <div class="vehicle-list">
+            <div class="vehicle-page w-100" id="page-1">
+                <div id="page-1" class="decorated w-100 page-marker" style="display:none;"></div>
+                    {% for data in dataset %}
+                        
+                    <div id="vehicle-1338" class="card vehicle-item" data-make="Ford" data-model="Ranger" data-year="2019" data-vin="1FTER4FH0KLA77680" data-thumbnail="https://content.homenetiol.com/2001243/2159366/0x0/49b4af938c2d428da1e0d5fb36a7af34.jpg" data-price="31933" data-id="1338">
+                        <button class="btn btn-sm favorite-button" data-id="1338"><i class="fas fa-heart"></i></button>
+                        <span class="view-counter "><i class="far fa-eye mr-2"></i>873</span>
+                        <a  href="/details/{{data.short_id}}" target="_blank">                      
+                        <img class="w-100 card-img-top" src='{{ data.thumb }}'   data-xblocker="passed" style="visibility: visible;">
+                        </a>
+                        <div class="card-body p-2">
+                            
+                            <div class="row w-100 mx-auto details p-0">
+                                
+                                <div class="p-0">   
+                                    {% for item in data.fields %}
+                                        {% if item.key == 'make' %}   
+                                        <span class="vehicle-result-title">  
+                                            {{ item.value }}   
+                                        </span>                                    
+                                        {% elif item.key == 'model' %}
+                                        <span class="vehicle-result-model text-secondary">{{ item.value }}  </span>
+                                        {% endif %}  
+                                    {% endfor %}
+                                </div>
+
+                                <div class="p-0 text-right mb-2">
+                                    {% for item in data.fields %}
+                                        {% if item.key == 'price' %}  
+                                        <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">${{ item.value }} </span>
+                                        {% elif item.key == 'mileage' %}
+                                        <span class="d-block vehicle-result-miles"> {{ item.value }} miles</span>
+                                        {% endif %}  
+                                    {% endfor %}
+                                </div>
+                                <div class="col-12 p-0 more">
+                                    <span class="vehicle-result-vin">Stock: 5429P</span>
+                                    <span class="vehicle-result-color"><span class="color-sample" style="background: #000"></span>Black interior</span>
+                                </div>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center d-inline">
+                            <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
+                            <span class="estimated-payment w-100">Estimated Payment: <span class="price float-right">$<span class="value" data-principal="31933">481</span>/mo</span></span>
+                        </div>
+                
+                    </div>
+                    {% endfor %}
+                </div>
+
+        </div>
+        
+    </div>
 </div>
-    
 
 
 {% endblock content %}

@@ -3,13 +3,12 @@ from django.http import HttpResponse
 
 from home.models import Blog
 from home.serializers import BlogSerializer
-# from rest_framework.viewsets import ModelViewSet
 
 from django.http.response import JsonResponse
 # from rest_framework.parsers import JSONParser 
 from rest_framework import status
  
-# from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view
 from requests.auth import HTTPBasicAuth
 import requests
 
@@ -25,9 +24,17 @@ def home(request):
     context ={}
     context["dataset"] = Blog.objects.all() 
     return render(request, 'home/index.html', context)
-    
-
     # return render(request, 'home/index.html', {})
+
+
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def details(request, pk):
+    d_data = Blog.objects.get(short_id=pk) 
+    if request.method == 'GET': 
+        blog_serializer = BlogSerializer(d_data) 
+        # return JsonResponse(blog_serializer.data)
+        return render(request, 'home/details.html', {'data' : blog_serializer.data})
 
 def services(request):
     return render(request, 'home/services.html', {})
