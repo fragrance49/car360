@@ -189,23 +189,30 @@
             </div>
         </div>
     </div>
+    {% load home_extras %}
     <!-- Vehicle results area -->
     <div class="main vehicle-area">
         <div class="vehicle-list">
             <div class="vehicle-page w-100" id="page-1">
+                
                 <div id="page-1" class="decorated w-100 page-marker" style="display:none;"></div>
                     {% for data in dataset %}
-                        
                     <div id="vehicle-1338" class="card vehicle-item" data-make="Ford" data-model="Ranger" data-year="2019" data-vin="1FTER4FH0KLA77680" data-thumbnail="https://content.homenetiol.com/2001243/2159366/0x0/49b4af938c2d428da1e0d5fb36a7af34.jpg" data-price="31933" data-id="1338">
                         <button class="btn btn-sm favorite-button" data-id="1338"><i class="fas fa-heart"></i></button>
                         <span class="view-counter "><i class="far fa-eye mr-2"></i>873</span>
                         <a  href="/details/{{data.short_id}}" target="_blank">                      
                         <img class="w-100 card-img-top" src='{{ data.thumb }}'   data-xblocker="passed" style="visibility: visible;">
                         </a>
+                      
+                        <!--template tag (in the template)-->
+                       
                         <div class="card-body p-2">
-                            
                             <div class="row w-100 mx-auto details p-0">
-                                
+
+                                <!-- <div class="p-0">
+                                    <span class="vehicle-result-title">Ford 2019</span>
+                                    <span class="vehicle-result-model text-secondary">Ranger</span>
+                                </div> -->
                                 <div class="p-0">   
                                     {% for item in data.fields %}
                                         {% if item.key == 'make' %}   
@@ -218,27 +225,57 @@
                                     {% endfor %}
                                 </div>
 
+
+                                <!-- <div class="p-0 text-right mb-2">
+                                    <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">$31,933</span>
+                                    <span class="d-block vehicle-result-miles">33,249 miles</span>
+                                </div> -->
+
                                 <div class="p-0 text-right mb-2">
                                     {% for item in data.fields %}
                                         {% if item.key == 'price' %}  
-                                        <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">${{ item.value }} </span>
+                                        <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">$ {{ item.value }} </span>
                                         {% elif item.key == 'mileage' %}
                                         <span class="d-block vehicle-result-miles"> {{ item.value }} miles</span>
                                         {% endif %}  
                                     {% endfor %}
                                 </div>
-                                <div class="col-12 p-0 more">
+
+
+                                <!-- <div class="col-12 p-0 more">
                                     <span class="vehicle-result-vin">Stock: 5429P</span>
                                     <span class="vehicle-result-color"><span class="color-sample" style="background: #000"></span>Black interior</span>
+                                </div> -->
+
+                                <div class="col-12 p-0 more">
+                                    {% for item in data.fields %}
+                                        {% if item.key == 'mileage' %}  
+                                        <span class="vehicle-result-vin">Stock: {{ item.value }}xx </span>
+                                        
+                                        {% elif item.key == 'interior_color'%}
+                                        <span class="vehicle-result-color"><span class="color-sample" style="background: {{item.value}}"></span>{{ item.value }} miles</span>
+                                        {% endif %}  
+                                    {% endfor %}
                                 </div>
-                                    
-                                
+
+
+
+
                             </div>
                         </div>
-                        <div class="card-footer d-flex align-items-center d-inline">
-                            <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
-                            <span class="estimated-payment w-100">Estimated Payment: <span class="price float-right">$<span class="value" data-principal="31933">481</span>/mo</span></span>
-                        </div>
+
+                        
+
+
+                        {% for item in data.fields %}
+                            {% if item.key == 'price' %} 
+                            <div class="card-footer d-flex align-items-center d-inline">
+                                <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
+                                <span class="estimated-payment w-100">Estimated Payment: <span class="price float-right">$<span class="value" data-principal="{{item.value}}">xxx4</span>/mo</span></span>
+                            </div>
+                            {% else%}
+                            {% endif %}  
+                        {% endfor %}
                 
                     </div>
                     {% endfor %}

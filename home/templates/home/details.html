@@ -11,34 +11,36 @@
 {% endblock stylesheets %}
 
 {% block content %}
-<div id="vehicle-2073" class="page-toc-content" data-make="Hyundai" data-model="Accent" data-year="2020" data-vin="3KPC24A68LE106290" data-thumbnail="https://content.homenetiol.com/2001243/2159366/0x0/742d763918d84eb3bbd29bc568e146fd.jpg" data-price="17661.00" data-id="2073">
+<main role="main">   
+    <div id="vehicle-2073" class="page-toc-content" data-make="Hyundai" data-model="Accent" data-year="2020" data-vin="3KPC24A68LE106290" data-thumbnail="https://content.homenetiol.com/2001243/2159366/0x0/742d763918d84eb3bbd29bc568e146fd.jpg" data-price="17661.00" data-id="2073">
 
-    <div id="vdpHeader" class="vdp-header">
-        <div class="container header-container allow-overflow">
-            <div class="row w-100 mx-auto">
-                <div class="col-auto title-col">
-                    <h1 class="vdp-header-title font-weight-bold">{{data.short_id}} </h1>
-                    <h6 class="vdp-header-trim font-weight-bold mb-0">
-                        SE
-                    </h6>
-                </div>
-                <div class="col info-col">
-                    <p class="vdp-header-price font-weight-bold text-right text-primary"><span class='price '>$17,661</span></p>
-                        <p class="vdp-header-miles text-right mb-0">
-                            <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
-                            <span class="estimated-payment w-100">Est. <span class="price">$<span class="value" data-principal="17661.00">~</span>/mo</span></span>
-                        </p>
-                </div>
-                <div class="col-auto action-col pr-0">
-                    <div class="row align-items-center w-100 h-100 m-0">
-                            <div class="col-auto header-cta">
-                                <button class="btn btn-success text-white" data-toggle="modal" data-target="#formModal">Confirm availability</button>
-                            </div>
-                        <div class="col">
-                            <div class="dropdown">
-                                <button class="share-btn btn btn-link btn-sm btn-link-secondary" type="button" id="optionsMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="optionsMenuButton">
-                                    <a class="dropdown-item favorite-dropdown-item" href="#" data-id="2073"><i class="fas fa-heart mr-2"></i> Favorite</a>
+        <div id="vdpHeader" class="vdp-header">
+            <div class="container header-container allow-overflow">
+                <div class="row w-100 mx-auto">
+                    <div class="col-auto title-col">
+                        <h1 class="vdp-header-title font-weight-bold">{{data.short_id}} </h1>
+                        <h6 class="vdp-header-trim font-weight-bold mb-0">
+                            SE
+                        </h6>
+                    </div>
+                    <div class="col info-col">
+                        <p class="vdp-header-price font-weight-bold text-right text-primary"><span class='price '>$17,661</span></p>
+                            <p class="vdp-header-miles text-right mb-0">
+                                <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
+                                <span class="estimated-payment w-100">Est. <span class="price">$<span class="value" data-principal="17661.00">~</span>/mo</span></span>
+                            </p>
+                    </div>
+                    <div class="col-auto action-col pr-0">
+                        <div class="row align-items-center w-100 h-100 m-0">
+                                <div class="col-auto header-cta">
+                                    <button class="btn btn-success text-white" data-toggle="modal" data-target="#formModal">Confirm availability</button>
+                                </div>
+                            <div class="col">
+                                <div class="dropdown">
+                                    <button class="share-btn btn btn-link btn-sm btn-link-secondary" type="button" id="optionsMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="optionsMenuButton">
+                                        <a class="dropdown-item favorite-dropdown-item" href="#" data-id="2073"><i class="fas fa-heart mr-2"></i> Favorite</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,544 +48,543 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <div class="container header-container">
-        <div class="row p-0 w-100 mx-auto align-items-center justify-content-between">
-            <div>
-                <button id="backToResults" class="btn btn-block btn-link btn-link-secondary pl-0"><i class="fas fa-long-arrow-alt-left"></i> Back to Results</button>
+        <!-- <div class="container header-container">
+            <div class="row p-0 w-100 mx-auto align-items-center justify-content-between">
+                <div>
+                    <button id="backToResults" class="btn btn-block btn-link btn-link-secondary pl-0"><i class="fas fa-long-arrow-alt-left"></i> Back to Results</button>
+                </div>
+                <div>
+                    <small class="view-counter text-muted"><i class='far fa-eye mr-1'></i> 33 interested buyers</small>
+                </div>
             </div>
-            <div>
-                <small class="view-counter text-muted"><i class='far fa-eye mr-1'></i> 33 interested buyers</small>
-            </div>
+            <hr class="my-2" />
+        </div> -->
+        <a id="gallerySection" class="vdp-anchor"></a>
+
+        <div class="gallery-header vdp-anchor" anchor="gallerySection" toc-section="Gallery">
+            {{ data.iframe |safe }}
         </div>
-        <hr class="my-2" />
-    </div> -->
-    <a id="gallerySection" class="vdp-anchor"></a>
+        
 
-    <div class="gallery-header vdp-anchor" anchor="gallerySection" toc-section="Gallery">
-        {{ data.iframe |safe }}
-    </div>
-    
-
-    <div class="container">
-        <div class="text-center py-3">
-            <div class="btn-group btn-group-stack">
-                    <button class="btn btn-shadow px-1 m-0 btn-block" data-toggle="modal" data-target="#formActionModal">
-                        <i class="fas fa-car w-100 mb-2" style="font-size: 2em;"></i>
-                        Schedule Test Drive
+        <div class="container">
+            <div class="text-center py-3">
+                <div class="btn-group btn-group-stack">
+                        <button class="btn btn-shadow px-1 m-0 btn-block" data-toggle="modal" data-target="#formActionModal">
+                            <i class="fas fa-car w-100 mb-2" style="font-size: 2em;"></i>
+                            Schedule Test Drive
+                        </button>
+                    <button class="btn btn-shadow px-1  btn-block m-0" data-toggle="modal" data-target="#galleryModal">
+                        <i class="fas fa-images w-100 mb-2" style="font-size: 2em;"></i>
+                        Image Gallery
                     </button>
-                <button class="btn btn-shadow px-1  btn-block m-0" data-toggle="modal" data-target="#galleryModal">
-                    <i class="fas fa-images w-100 mb-2" style="font-size: 2em;"></i>
-                    Image Gallery
-                </button>
-                <a href="https://www.carfax.com/VehicleHistory/p/Report.cfx?partner=DPR_0&vin=3KPC24A68LE106290" target="_blank" class="btn btn-shadow px-1 btn-block  m-0">
-                    <svg viewBox="-.6 0 901.2 168" height="24" xmlns="http://www.w3.org/2000/svg" style="margin: 0.5rem;" class="w-100"><path d="m10.3 1.2c.1.6-.7 1.6-1.9 2.2-2.8 1.5-5.6 4.4-7.1 7.4-1.9 3.5-1.9 145.2 0 148.5 2.1 3.8 3.9 5.7 7 7.2 2.7 1.3 52.8 1.5 424.7 1.5 391.9 0 421.9-.1 425-1.7 1.9-.9 4.4-2.8 5.7-4.2l2.2-2.6v-149l-2.4-2.8c-1.3-1.5-3.6-3.2-5-3.7s-2.5-1.6-2.5-2.5c0-1.3-44.6-1.5-423-1.5-322.1 0-422.9.3-422.7 1.2zm846.6 9.4 3.1 2.6v143.6l-3.1 2.6-3.1 2.6h-419.9c-361.6 0-420.4-.2-422.8-1.4-1.5-.8-3.2-2.6-3.9-4.1-.9-1.9-1.2-20.2-1.2-71.8.1-74.2 0-72.4 5.1-75.3 2-1.1 75.7-1.3 422.6-1.4h420.1z" /><path d="m14.5 16.2c-.3.7-.4 32.1-.3 69.8l.3 68.5 63.5.3c34.9.1 65 0 66.8-.3l3.2-.6v-137.7l-2.2-.6c-1.3-.3-31.2-.6-66.6-.6-50.5 0-64.4.3-64.7 1.2zm82.6 22.3c10.3 2.9 15.9 7.3 21.5 16.8 3.8 6.4 4.4 10.5 1.7 11.3-2.5.8-7.8 2.8-14 5.3-2.8 1.2-5.6 2.1-6.1 2.1-.6 0-2.3-2.1-3.8-4.7-4-7-6-8.2-12.5-8.3-4.8 0-5.9.4-8.6 3-9.2 9-8.9 36.2.4 43.9 1.9 1.6 4.9 3.2 6.6 3.5 4.2.9 11.5-2.9 14.5-7.4 3.5-5.4 5-5.6 11.8-2 12.4 6.7 13.4 7.4 13.4 9.2 0 2.8-7.3 12-12.2 15.4-16.9 11.8-43.5 9.8-56.3-4.1-8.9-9.6-12.5-20.1-12.5-36.6 0-17.5 4.5-28.9 15.5-39.2 8.6-8.1 27.4-11.9 40.6-8.2zm58.4-22.3c-.3.7-.4 32.1-.3 69.8l.3 68.5 65.3.3c43.9.1 65.9-.1 67.3-.8 1.9-1 1.9-2.7 1.9-69 0-66.1-.1-68-1.9-69-3.1-1.6-132-1.4-132.6.2zm81.2 24.1c1.1 1.8 2.2 4.4 2.6 5.7.5 2.4 1.1 4 5.7 16 1.2 3 2.6 7.1 3.2 9 .5 1.9 1.4 3.9 1.8 4.5.4.5 1 2.1 1.3 3.5s1.5 5 2.6 8c3.8 9.7 5.2 13.4 6.3 17 .5 1.9 1.4 3.9 1.8 4.5.4.5 1 2.1 1.3 3.5s1.5 5 2.7 8 2.5 7 2.7 8.7l.5 3.3h-26.8l-1.7-2.9c-.9-1.6-1.7-4-1.7-5.3 0-1.2-.9-3.8-2-5.6l-2-3.2h-12.4c-11.8 0-12.6.1-14 2.2-.9 1.2-1.9 3.8-2.2 5.8-.4 1.9-1.4 4.7-2.2 6.2l-1.6 2.8h-26.8l.5-2.7c.2-1.6 1.5-5.3 2.7-8.3s2.4-6.6 2.7-8 .9-3 1.3-3.5c.4-.6 1.3-2.6 1.8-4.5 1.1-3.6 2.5-7.3 6.3-17 1.1-3 2.3-6.6 2.6-8s.9-3 1.3-3.5c.4-.6 1.3-2.6 1.8-4.5.6-1.9 2-6 3.2-9 4-10.5 5.1-13.5 5.7-15.5.7-3 3.7-8.9 4.8-9.7.6-.4 6.2-.8 12.7-.8h11.6z" /><path d="m221.4 71.7c-1 4.7-3.5 13.6-4.9 17.5-.7 2-1 3.9-.7 4.2.9 1 13 .7 13.7-.3.3-.5-.1-2.5-.9-4.3-1.6-3.8-3.5-10.8-4.3-15.6-.7-4.2-2.1-5-2.9-1.5zm75.1-55.5c-.3.7-.4 32.1-.3 69.8l.3 68.5 63.5.3c34.9.1 65 0 66.8-.3l3.2-.6v-68.4c0-66.6-.1-68.5-1.9-69.5-3.1-1.6-131-1.4-131.6.2zm79.4 22.9c11.3 1.9 17.3 5.6 22.7 14 2.6 4.1 2.8 5.2 2.8 14.9.1 9-.2 11.2-2.2 15.2-2.2 4.4-9.1 11.8-11.1 11.8-2.3 0-1.7 3.7 1.9 10.3 9.4 17.5 13.2 25.9 12.3 26.8-.5.5-6.7.8-14.3.7l-13.4-.3-7.7-15.4c-4.3-8.5-8.3-15.8-9.1-16.2-1.8-1.2-6.9-.4-7.9 1.2-.5.8-.9 7.8-.9 15.6 0 16.8 1.3 15.5-15 15.1l-10.5-.3-.3-46c-.1-25.3 0-46.6.3-47.3.6-1.6 42.8-1.7 52.4-.1z" /><path d="m350.2 61.2c-1.5 1.5-1.6 16.4-.1 17.4 1.3.7 19.3.6 21.4-.2.7-.3 2.1-2.4 3-4.6 2.2-5.6.6-10.4-4.1-12.4-4.2-1.7-18.5-1.9-20.2-.2zm87.3-45c-.3.7-.4 32.1-.3 69.8l.3 68.5 65.3.3c43.9.1 65.9-.1 67.3-.8 1.9-1 1.9-2.7 1.9-69 0-66.1-.1-68-1.9-69-3.1-1.6-132-1.4-132.6.2zm103.4 23.2c.8.9 1.1 4.8.9 11.2l-.3 9.9-23.5.3c-13.8.1-23.7.6-24 1.2-.5.8-.5 6.8-.1 10.2.1.5 6.2.8 13.6.8 15.9 0 15.5-.3 15.5 11.5 0 11.7.3 11.5-15.1 11.5-10.3 0-13.1.3-13.5 1.4-.3.8-.6 8.7-.7 17.6-.2 13.1-.5 16.3-1.7 17-.8.6-6.7.9-13 .8l-11.5-.3-.3-46c-.1-25.3 0-46.6.3-47.3.7-1.9 71.8-1.8 73.4.2zm38.3-23.2c-1.9 1.9-1.7 136.1.2 137.7.9.8 19.4 1 67.2.9l65.9-.3v-139l-66-.3c-50.6-.2-66.4.1-67.3 1zm76.6 22.4c2.1.6 4 3.8 6.2 10.4.5 1.4 1.8 5 3 8s2.6 7.1 3.2 9c.5 1.9 1.4 3.9 1.9 4.4.5.6.9 1.9.9 3.1 0 1.1.6 2.9 1.4 4 .7 1.1 1.6 3.1 1.9 4.5s1.5 5 2.6 8c4.2 10.7 5.2 13.5 6.1 16.8.4 1.8 1.2 3.8 1.8 4.5.5.7 1.2 2.3 1.5 3.7s1.5 5 2.7 8c4 9.9 4.4 9.5-10.5 9.8-7.1.1-13.6-.2-14.3-.7-.8-.4-1.7-2.6-2.2-4.7-.5-2.2-1.6-5.6-2.5-7.7l-1.5-3.7h-13c-12.2 0-13 .1-14.4 2.2-.9 1.2-1.6 3-1.6 3.9s-.9 3.7-2 6.3l-2.1 4.6h-12.9c-7.4 0-13.1-.4-13.5-1-.8-1.3.4-5.3 6.6-21 1.1-3 2.3-6.6 2.6-8s1.2-3.4 1.9-4.5c.8-1.1 1.4-2.9 1.4-4 0-1.2.4-2.5.9-3.1.5-.5 1.4-2.5 1.9-4.4 1.1-3.6 2.4-7.2 6.3-17 1.1-3 2.3-6.6 2.6-8s.9-3 1.3-3.5c.4-.6 1.3-2.6 1.8-4.5 4.7-15.7 5.1-16 17.6-16 5.6 0 11.1.3 12.4.6z" /><path d="m643 75.1c-1.1 2.4-2 5.3-2 6.4 0 1-.7 3.8-1.6 6.2-2.4 6.1-1.6 7.3 5.1 7.3 6.8 0 7.2-.8 5-8.7-.9-3.2-2-7.7-2.4-10.1-1.1-5.9-1.8-6.1-4.1-1.1zm76.7-59.4c-.4.3-.7 31.6-.7 69.5 0 54.4.3 68.8 1.3 68.8h66.6c51.3 0 65.7-.3 66.3-1.2.4-.7.8-31.5.8-68.4 0-50.8-.3-67.3-1.2-68.2s-17.1-1.2-66.8-1.2c-36.1 0-66 .3-66.3.7zm130.3 4.7v129.8c0 .5-4.5.8-10 .8-11.5 0-10.2.8-19.5-12.5-3.3-4.8-8.5-12.1-11.6-16.3-3-4.3-5.8-8.5-6.2-9.6-.6-1.6 1.5-6.4 4.6-10.1 1.1-1.4 12.8-17.7 14.7-20.5.8-1.2 3.4-4.7 5.7-7.9 2.3-3.1 4.3-6.2 4.3-6.9 0-.9-3.6-1.2-14.9-1.2h-14.9l-2.6 3.4c-1.4 1.9-2.6 3.7-2.6 3.9s-2 3.5-4.5 7.3c-2.5 3.7-4.5 7.4-4.5 8.1 0 1.7-2.6 1.7-3.4 0-.3-.6-1.4-2.4-2.4-3.9-.9-1.5-3.7-5.9-6.1-9.8s-5.2-7.5-6.2-8c-1-.6-8.1-1-15.8-1-12 0-14.1.2-14.1 1.5 0 1.8 2.8 6.3 10.1 16.3 3 3.9 7.4 10.1 9.9 13.7 2.5 3.7 5.5 7.8 6.7 9.3 1.3 1.5 2.3 3.5 2.3 4.6 0 1-3.7 6.9-8.2 13.1-4.6 6.3-10.8 14.8-13.8 19l-5.4 7.6-9.6-.3-9.5-.3v-131l61.5-.5c33.8-.3 62.5-.3 63.8-.1 1.2.2 2.2.8 2.2 1.5zm-62 114.8c1 2.3 1.5 3.2 6.2 10.5 1.4 2.3 2.4 4.4 2 4.7-1 1.1-22.2.7-22.2-.4 0-.6 1.8-3.7 4-6.9s4-6.3 4-6.8c0-1.3 2.2-3.3 3.7-3.3.8 0 1.8 1 2.3 2.2zm94-119c0 6 .1 6.2 1.6 4s1.7-2.2 3.4-.7c1.2 1.1 2 1.3 2.5.5 1.1-1.7-.3-4-2-3.4-2.1.8-4.4-1.3-3.8-3.5.3-1 0-2.2-.6-2.5-.8-.5-1.1 1.3-1.1 5.6zm8-4.3c0 1.7 1.8 2.1 2.4.6.3-.9 0-1.5-.9-1.5-.8 0-1.5.4-1.5.9zm7.6 1.9c-.3.6-.1 1.4.5 1.7 1.5 1 2.5-.3 1.2-1.6-.7-.7-1.3-.7-1.7-.1zm0 4.9c-1.1 1.1-.6 2.3.9 2.3.8 0 1.5-.4 1.5-.9 0-1.3-1.6-2.2-2.4-1.4z" /></svg>
-                    Get Report
-                </a>
-                <a href="https://www.nhtsa.gov/recalls" class="btn btn-shadow px-1 btn-block  m-0" target="_blank">
-                    <i class="fas fa-bullhorn w-100 mb-2" style="font-size: 2em;"></i>
-                    Check for Recalls
-                </a>
-                <a href="https://www.kbb.com/instant-cash-offer/W/66300531/43A6F9B8-DB6C-48C0-A360-F658B2176E3E/" class="btn btn-shadow px-1 btn-block  m-0" target="_blank">
-                    <i class="fas fa-balance-scale w-100 mb-2" style="font-size: 2em;"></i>
-                    Value Trade
-                </a>
+                    <a href="https://www.carfax.com/VehicleHistory/p/Report.cfx?partner=DPR_0&vin=3KPC24A68LE106290" target="_blank" class="btn btn-shadow px-1 btn-block  m-0">
+                        <svg viewBox="-.6 0 901.2 168" height="24" xmlns="http://www.w3.org/2000/svg" style="margin: 0.5rem;" class="w-100"><path d="m10.3 1.2c.1.6-.7 1.6-1.9 2.2-2.8 1.5-5.6 4.4-7.1 7.4-1.9 3.5-1.9 145.2 0 148.5 2.1 3.8 3.9 5.7 7 7.2 2.7 1.3 52.8 1.5 424.7 1.5 391.9 0 421.9-.1 425-1.7 1.9-.9 4.4-2.8 5.7-4.2l2.2-2.6v-149l-2.4-2.8c-1.3-1.5-3.6-3.2-5-3.7s-2.5-1.6-2.5-2.5c0-1.3-44.6-1.5-423-1.5-322.1 0-422.9.3-422.7 1.2zm846.6 9.4 3.1 2.6v143.6l-3.1 2.6-3.1 2.6h-419.9c-361.6 0-420.4-.2-422.8-1.4-1.5-.8-3.2-2.6-3.9-4.1-.9-1.9-1.2-20.2-1.2-71.8.1-74.2 0-72.4 5.1-75.3 2-1.1 75.7-1.3 422.6-1.4h420.1z" /><path d="m14.5 16.2c-.3.7-.4 32.1-.3 69.8l.3 68.5 63.5.3c34.9.1 65 0 66.8-.3l3.2-.6v-137.7l-2.2-.6c-1.3-.3-31.2-.6-66.6-.6-50.5 0-64.4.3-64.7 1.2zm82.6 22.3c10.3 2.9 15.9 7.3 21.5 16.8 3.8 6.4 4.4 10.5 1.7 11.3-2.5.8-7.8 2.8-14 5.3-2.8 1.2-5.6 2.1-6.1 2.1-.6 0-2.3-2.1-3.8-4.7-4-7-6-8.2-12.5-8.3-4.8 0-5.9.4-8.6 3-9.2 9-8.9 36.2.4 43.9 1.9 1.6 4.9 3.2 6.6 3.5 4.2.9 11.5-2.9 14.5-7.4 3.5-5.4 5-5.6 11.8-2 12.4 6.7 13.4 7.4 13.4 9.2 0 2.8-7.3 12-12.2 15.4-16.9 11.8-43.5 9.8-56.3-4.1-8.9-9.6-12.5-20.1-12.5-36.6 0-17.5 4.5-28.9 15.5-39.2 8.6-8.1 27.4-11.9 40.6-8.2zm58.4-22.3c-.3.7-.4 32.1-.3 69.8l.3 68.5 65.3.3c43.9.1 65.9-.1 67.3-.8 1.9-1 1.9-2.7 1.9-69 0-66.1-.1-68-1.9-69-3.1-1.6-132-1.4-132.6.2zm81.2 24.1c1.1 1.8 2.2 4.4 2.6 5.7.5 2.4 1.1 4 5.7 16 1.2 3 2.6 7.1 3.2 9 .5 1.9 1.4 3.9 1.8 4.5.4.5 1 2.1 1.3 3.5s1.5 5 2.6 8c3.8 9.7 5.2 13.4 6.3 17 .5 1.9 1.4 3.9 1.8 4.5.4.5 1 2.1 1.3 3.5s1.5 5 2.7 8 2.5 7 2.7 8.7l.5 3.3h-26.8l-1.7-2.9c-.9-1.6-1.7-4-1.7-5.3 0-1.2-.9-3.8-2-5.6l-2-3.2h-12.4c-11.8 0-12.6.1-14 2.2-.9 1.2-1.9 3.8-2.2 5.8-.4 1.9-1.4 4.7-2.2 6.2l-1.6 2.8h-26.8l.5-2.7c.2-1.6 1.5-5.3 2.7-8.3s2.4-6.6 2.7-8 .9-3 1.3-3.5c.4-.6 1.3-2.6 1.8-4.5 1.1-3.6 2.5-7.3 6.3-17 1.1-3 2.3-6.6 2.6-8s.9-3 1.3-3.5c.4-.6 1.3-2.6 1.8-4.5.6-1.9 2-6 3.2-9 4-10.5 5.1-13.5 5.7-15.5.7-3 3.7-8.9 4.8-9.7.6-.4 6.2-.8 12.7-.8h11.6z" /><path d="m221.4 71.7c-1 4.7-3.5 13.6-4.9 17.5-.7 2-1 3.9-.7 4.2.9 1 13 .7 13.7-.3.3-.5-.1-2.5-.9-4.3-1.6-3.8-3.5-10.8-4.3-15.6-.7-4.2-2.1-5-2.9-1.5zm75.1-55.5c-.3.7-.4 32.1-.3 69.8l.3 68.5 63.5.3c34.9.1 65 0 66.8-.3l3.2-.6v-68.4c0-66.6-.1-68.5-1.9-69.5-3.1-1.6-131-1.4-131.6.2zm79.4 22.9c11.3 1.9 17.3 5.6 22.7 14 2.6 4.1 2.8 5.2 2.8 14.9.1 9-.2 11.2-2.2 15.2-2.2 4.4-9.1 11.8-11.1 11.8-2.3 0-1.7 3.7 1.9 10.3 9.4 17.5 13.2 25.9 12.3 26.8-.5.5-6.7.8-14.3.7l-13.4-.3-7.7-15.4c-4.3-8.5-8.3-15.8-9.1-16.2-1.8-1.2-6.9-.4-7.9 1.2-.5.8-.9 7.8-.9 15.6 0 16.8 1.3 15.5-15 15.1l-10.5-.3-.3-46c-.1-25.3 0-46.6.3-47.3.6-1.6 42.8-1.7 52.4-.1z" /><path d="m350.2 61.2c-1.5 1.5-1.6 16.4-.1 17.4 1.3.7 19.3.6 21.4-.2.7-.3 2.1-2.4 3-4.6 2.2-5.6.6-10.4-4.1-12.4-4.2-1.7-18.5-1.9-20.2-.2zm87.3-45c-.3.7-.4 32.1-.3 69.8l.3 68.5 65.3.3c43.9.1 65.9-.1 67.3-.8 1.9-1 1.9-2.7 1.9-69 0-66.1-.1-68-1.9-69-3.1-1.6-132-1.4-132.6.2zm103.4 23.2c.8.9 1.1 4.8.9 11.2l-.3 9.9-23.5.3c-13.8.1-23.7.6-24 1.2-.5.8-.5 6.8-.1 10.2.1.5 6.2.8 13.6.8 15.9 0 15.5-.3 15.5 11.5 0 11.7.3 11.5-15.1 11.5-10.3 0-13.1.3-13.5 1.4-.3.8-.6 8.7-.7 17.6-.2 13.1-.5 16.3-1.7 17-.8.6-6.7.9-13 .8l-11.5-.3-.3-46c-.1-25.3 0-46.6.3-47.3.7-1.9 71.8-1.8 73.4.2zm38.3-23.2c-1.9 1.9-1.7 136.1.2 137.7.9.8 19.4 1 67.2.9l65.9-.3v-139l-66-.3c-50.6-.2-66.4.1-67.3 1zm76.6 22.4c2.1.6 4 3.8 6.2 10.4.5 1.4 1.8 5 3 8s2.6 7.1 3.2 9c.5 1.9 1.4 3.9 1.9 4.4.5.6.9 1.9.9 3.1 0 1.1.6 2.9 1.4 4 .7 1.1 1.6 3.1 1.9 4.5s1.5 5 2.6 8c4.2 10.7 5.2 13.5 6.1 16.8.4 1.8 1.2 3.8 1.8 4.5.5.7 1.2 2.3 1.5 3.7s1.5 5 2.7 8c4 9.9 4.4 9.5-10.5 9.8-7.1.1-13.6-.2-14.3-.7-.8-.4-1.7-2.6-2.2-4.7-.5-2.2-1.6-5.6-2.5-7.7l-1.5-3.7h-13c-12.2 0-13 .1-14.4 2.2-.9 1.2-1.6 3-1.6 3.9s-.9 3.7-2 6.3l-2.1 4.6h-12.9c-7.4 0-13.1-.4-13.5-1-.8-1.3.4-5.3 6.6-21 1.1-3 2.3-6.6 2.6-8s1.2-3.4 1.9-4.5c.8-1.1 1.4-2.9 1.4-4 0-1.2.4-2.5.9-3.1.5-.5 1.4-2.5 1.9-4.4 1.1-3.6 2.4-7.2 6.3-17 1.1-3 2.3-6.6 2.6-8s.9-3 1.3-3.5c.4-.6 1.3-2.6 1.8-4.5 4.7-15.7 5.1-16 17.6-16 5.6 0 11.1.3 12.4.6z" /><path d="m643 75.1c-1.1 2.4-2 5.3-2 6.4 0 1-.7 3.8-1.6 6.2-2.4 6.1-1.6 7.3 5.1 7.3 6.8 0 7.2-.8 5-8.7-.9-3.2-2-7.7-2.4-10.1-1.1-5.9-1.8-6.1-4.1-1.1zm76.7-59.4c-.4.3-.7 31.6-.7 69.5 0 54.4.3 68.8 1.3 68.8h66.6c51.3 0 65.7-.3 66.3-1.2.4-.7.8-31.5.8-68.4 0-50.8-.3-67.3-1.2-68.2s-17.1-1.2-66.8-1.2c-36.1 0-66 .3-66.3.7zm130.3 4.7v129.8c0 .5-4.5.8-10 .8-11.5 0-10.2.8-19.5-12.5-3.3-4.8-8.5-12.1-11.6-16.3-3-4.3-5.8-8.5-6.2-9.6-.6-1.6 1.5-6.4 4.6-10.1 1.1-1.4 12.8-17.7 14.7-20.5.8-1.2 3.4-4.7 5.7-7.9 2.3-3.1 4.3-6.2 4.3-6.9 0-.9-3.6-1.2-14.9-1.2h-14.9l-2.6 3.4c-1.4 1.9-2.6 3.7-2.6 3.9s-2 3.5-4.5 7.3c-2.5 3.7-4.5 7.4-4.5 8.1 0 1.7-2.6 1.7-3.4 0-.3-.6-1.4-2.4-2.4-3.9-.9-1.5-3.7-5.9-6.1-9.8s-5.2-7.5-6.2-8c-1-.6-8.1-1-15.8-1-12 0-14.1.2-14.1 1.5 0 1.8 2.8 6.3 10.1 16.3 3 3.9 7.4 10.1 9.9 13.7 2.5 3.7 5.5 7.8 6.7 9.3 1.3 1.5 2.3 3.5 2.3 4.6 0 1-3.7 6.9-8.2 13.1-4.6 6.3-10.8 14.8-13.8 19l-5.4 7.6-9.6-.3-9.5-.3v-131l61.5-.5c33.8-.3 62.5-.3 63.8-.1 1.2.2 2.2.8 2.2 1.5zm-62 114.8c1 2.3 1.5 3.2 6.2 10.5 1.4 2.3 2.4 4.4 2 4.7-1 1.1-22.2.7-22.2-.4 0-.6 1.8-3.7 4-6.9s4-6.3 4-6.8c0-1.3 2.2-3.3 3.7-3.3.8 0 1.8 1 2.3 2.2zm94-119c0 6 .1 6.2 1.6 4s1.7-2.2 3.4-.7c1.2 1.1 2 1.3 2.5.5 1.1-1.7-.3-4-2-3.4-2.1.8-4.4-1.3-3.8-3.5.3-1 0-2.2-.6-2.5-.8-.5-1.1 1.3-1.1 5.6zm8-4.3c0 1.7 1.8 2.1 2.4.6.3-.9 0-1.5-.9-1.5-.8 0-1.5.4-1.5.9zm7.6 1.9c-.3.6-.1 1.4.5 1.7 1.5 1 2.5-.3 1.2-1.6-.7-.7-1.3-.7-1.7-.1zm0 4.9c-1.1 1.1-.6 2.3.9 2.3.8 0 1.5-.4 1.5-.9 0-1.3-1.6-2.2-2.4-1.4z" /></svg>
+                        Get Report
+                    </a>
+                    <a href="https://www.nhtsa.gov/recalls" class="btn btn-shadow px-1 btn-block  m-0" target="_blank">
+                        <i class="fas fa-bullhorn w-100 mb-2" style="font-size: 2em;"></i>
+                        Check for Recalls
+                    </a>
+                    <a href="https://www.kbb.com/instant-cash-offer/W/66300531/43A6F9B8-DB6C-48C0-A360-F658B2176E3E/" class="btn btn-shadow px-1 btn-block  m-0" target="_blank">
+                        <i class="fas fa-balance-scale w-100 mb-2" style="font-size: 2em;"></i>
+                        Value Trade
+                    </a>
+                </div>
+                <div class="single-vehicle-action-group pt-3" style="max-width: 100%; width: 500px; margin: 0 auto;">
+                    <button class="capital-one-prequalification-button"
+                            data-client-token="45141d22-52f9-4147-a7bb-e443364f5408"
+                            data-button-theme="default"
+                            data-sales-price="17661.00"
+                            data-vehicle-image-url="https://content.homenetiol.com/2001243/2159366/0x0/742d763918d84eb3bbd29bc568e146fd.jpg"
+                            data-vin="3KPC24A68LE106290">
+                        Explore Financing
+                    </button>
+                    <style type='text/css'>
+                        .capital-one-prequalification-button {
+                            display: none;
+                        }
+                    </style>
+                    <script async src="https://auto-digital-retail.capitalone.com/loader.js" charset="utf-8"></script>
+                </div>
             </div>
-            <div class="single-vehicle-action-group pt-3" style="max-width: 100%; width: 500px; margin: 0 auto;">
-                <button class="capital-one-prequalification-button"
-                        data-client-token="45141d22-52f9-4147-a7bb-e443364f5408"
-                        data-button-theme="default"
-                        data-sales-price="17661.00"
-                        data-vehicle-image-url="https://content.homenetiol.com/2001243/2159366/0x0/742d763918d84eb3bbd29bc568e146fd.jpg"
-                        data-vin="3KPC24A68LE106290">
-                    Explore Financing
-                </button>
-                <style type='text/css'>
-                    .capital-one-prequalification-button {
-                        display: none;
-                    }
-                </style>
-                <script async src="https://auto-digital-retail.capitalone.com/loader.js" charset="utf-8"></script>
-            </div>
-        </div>
 
-            <a id="descriptionSection" class="vdp-anchor"></a>
-            <section class="vdp-section vdp-anchor" anchor="descriptionSection" toc-section="Description">
+                <a id="descriptionSection" class="vdp-anchor"></a>
+                <section class="vdp-section vdp-anchor" anchor="descriptionSection" toc-section="Description">
+                    <div class="container">
+                        <h1 class="h1 vdp-section-title">Description</h1>
+                        <p>2020 Hyundai Accent SE Admiral Blue Pearl FWD 1.6L DOHC IVT CARFAX One-Owner. Clean CARFAX. 33/41 City/Highway MPG Our Certification ensures our vehicles operate at a higher standard, from being reconditioned and repaired to a higher standard, for you, the customer. If for any reason you are unhappy with your purchase within 3 days and/or 300 miles we will swap out your vehicle. No questions asked. Our goal is to provide you with a purchasing experience you can count on (See 3 Day Exchange on our website for details)! Are you interested? Call us anytime at 716.773.2747 for additional information or fill out a quick form now...</p>
+                    </div>
+                </section>
+            <a id="featureSection" class="vdp-anchor"></a>
+
+            <section anchor="featureSection" class="vdp-section vdp-anchor" toc-section="Key Features">
                 <div class="container">
-                    <h1 class="h1 vdp-section-title">Description</h1>
-                    <p>2020 Hyundai Accent SE Admiral Blue Pearl FWD 1.6L DOHC IVT CARFAX One-Owner. Clean CARFAX. 33/41 City/Highway MPG Our Certification ensures our vehicles operate at a higher standard, from being reconditioned and repaired to a higher standard, for you, the customer. If for any reason you are unhappy with your purchase within 3 days and/or 300 miles we will swap out your vehicle. No questions asked. Our goal is to provide you with a purchasing experience you can count on (See 3 Day Exchange on our website for details)! Are you interested? Call us anytime at 716.773.2747 for additional information or fill out a quick form now...</p>
+                    <h1 class="h1 vdp-section-title">Key Features</h1>
+                    <ul class="text-center list-inline list-unstyled">
+                        {% for item in data.entertainmentFeatures %}
+                            <li class="h5 mx-5 list-inline-item">{{item}}</li>                    
+                        {% endfor %}
+                    </ul>
+
                 </div>
             </section>
-        <a id="featureSection" class="vdp-anchor"></a>
 
-        <section anchor="featureSection" class="vdp-section vdp-anchor" toc-section="Key Features">
-            <div class="container">
-                <h1 class="h1 vdp-section-title">Key Features</h1>
-                <ul class="text-center list-inline list-unstyled">
-                    {% for item in data.entertainmentFeatures %}
-                        <li class="h5 mx-5 list-inline-item">{{item}}</li>                    
-                    {% endfor %}
-                </ul>
+            <a id="vehicle-break-down" class="vdp-anchor"></a>
 
-            </div>
-        </section>
-
-        <a id="vehicle-break-down" class="vdp-anchor"></a>
-
-        <section anchor="vehicle-break-down" class="vdp-section vdp-anchor" toc-section="Specifications">
-            <div class="container">
-                <h1 class="h1 vdp-section-title">Specifications</h1>
-                <div class="row mx-auto w-100">
-                    {% for item in data.fields %}
-                        
-                        <div class="detail-block custom-border"><span class="font-weight-bold detail-title">{{item.key}}:</span> <span class="float-right col"><noanswer>{{item.value}}</noanswer></span></div>
-
-                    {% endfor %}
-                   
-                </div>
-            </div>
-        </section>
-
-        {% load static %}
-            <a id="vehicle-equipment" class="vdp-anchor"></a>
-            <section anchor="vehicle-equipment" class="vdp-section vdp-anchor" toc-section="Equipment">
+            <section anchor="vehicle-break-down" class="vdp-section vdp-anchor" toc-section="Specifications">
                 <div class="container">
-                    <h1 class="h1 vdp-section-title">Standard Equipment</h1>
-                    <div class="row mx-auto w-100 justify-content-center">
-                            <div class="col-lg-4 p-1">
-                                <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal" aria-expanded="true" aria-controls="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal">
-                                    <img height="45" src="{% static 'assets/Options.svg' %}" />
-                                    <br />
-                                    <span class="h6">OPTIONS</span>
-                                </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modalLabel">OPTIONS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  custom-border scrollable">
-                                            <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div id="equipment-75165d0b-91b6-4f03-9427-c63070c85df8">
-                                                            <h4>General</h4>
-                                                            <ul>
-                                                                    <li>
-                                                                        A/C
-                                                                    </li>
-                                                                    <li>
-                                                                        ABS
-                                                                    </li>
-                                                                    <li>
-                                                                        Adjustable Steering Wheel
-                                                                    </li>
-                                                                    <li>
-                                                                        ADMIRAL BLUE
-                                                                    </li>
-                                                                    <li>
-                                                                        AM/FM Stereo
-                                                                    </li>
-                                                                    <li>
-                                                                        Automatic Headlights
-                                                                    </li>
-                                                                    <li>
-                                                                        Auxiliary Audio Input
-                                                                    </li>
-                                                                    <li>
-                                                                        Back-Up Camera
-                                                                    </li>
-                                                                    <li>
-                                                                        BLACK  CLOTH SEAT TRIM
-                                                                    </li>
-                                                                    <li>
-                                                                        Bluetooth Connection
-                                                                    </li>
-                                                                    <li>
-                                                                        Brake Assist
-                                                                    </li>
-                                                                    <li>
-                                                                        Bucket Seats
-                                                                    </li>
-                                                                    <li>
-                                                                        Child Safety Locks
-                                                                    </li>
-                                                                    <li>
-                                                                        Cloth Seats
-                                                                    </li>
-                                                                    <li>
-                                                                        Cruise Control
-                                                                    </li>
-                                                                    <li>
-                                                                        Driver Air Bag
-                                                                    </li>
-                                                                    <li>
-                                                                        Driver Vanity Mirror
-                                                                    </li>
-                                                                    <li>
-                                                                        Front Disc/Rear Drum Brakes
-                                                                    </li>
-                                                                    <li>
-                                                                        Front Head Air Bag
-                                                                    </li>
-                                                                    <li>
-                                                                        Front Side Air Bag
-                                                                    </li>
-                                                                    <li>
-                                                                        Front Wheel Drive
-                                                                    </li>
-                                                                    <li>
-                                                                        Intermittent Wipers
-                                                                    </li>
-                                                                    <li>
-                                                                        Keyless Entry
-                                                                    </li>
-                                                                    <li>
-                                                                        MP3 Player
-                                                                    </li>
-                                                                    <li>
-                                                                        OPTION GROUP 01
-                                                                    </li>
-                                                                    <li>
-                                                                        Passenger Air Bag
-                                                                    </li>
-                                                                    <li>
-                                                                        Passenger Air Bag Sensor
-                                                                    </li>
-                                                                    <li>
-                                                                        Passenger Vanity Mirror
-                                                                    </li>
-                                                                    <li>
-                                                                        Pass-Through Rear Seat
-                                                                    </li>
-                                                                    <li>
-                                                                        Power Door Locks
-                                                                    </li>
-                                                                    <li>
-                                                                        Power Mirror(s)
-                                                                    </li>
-                                                                    <li>
-                                                                        Power Steering
-                                                                    </li>
-                                                                    <li>
-                                                                        Power Windows
-                                                                    </li>
-                                                                    <li>
-                                                                        Rear Bench Seat
-                                                                    </li>
-                                                                    <li>
-                                                                        Rear Defrost
-                                                                    </li>
-                                                                    <li>
-                                                                        Rear Head Air Bag
-                                                                    </li>
-                                                                    <li>
-                                                                        Remote Trunk Release
-                                                                    </li>
-                                                                    <li>
-                                                                        Security System
-                                                                    </li>
-                                                                    <li>
-                                                                        Stability Control
-                                                                    </li>
-                                                                    <li>
-                                                                        Steel Wheels
-                                                                    </li>
-                                                                    <li>
-                                                                        Steering Wheel Audio Controls
-                                                                    </li>
-                                                                    <li>
-                                                                        Temporary Spare Tire
-                                                                    </li>
-                                                                    <li>
-                                                                        Tire Pressure Monitor
-                                                                    </li>
-                                                                    <li>
-                                                                        Tires - Front All-Season
-                                                                    </li>
-                                                                    <li>
-                                                                        Tires - Rear All-Season
-                                                                    </li>
-                                                                    <li>
-                                                                        Traction Control
-                                                                    </li>
-                                                                    <li>
-                                                                        Trip Computer
-                                                                    </li>
-                                                                    <li>
-                                                                        Wheel Covers
-                                                                    </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 p-1">
-                                <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal" aria-expanded="true" aria-controls="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal">
-                                    <img height="45" src="{% static 'assets/Exterior Options.svg' %}" />
-                                    <br />
-                                    <span class="h6">EXTERIOR OPTIONS</span>
-                                </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modalLabel">EXTERIOR OPTIONS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  custom-border scrollable">
-                                            <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div id="equipment-eaf7ae63-efb1-401d-9d7f-d5963b82aed7">
-                                                            <h4>Exterior</h4>
-                                                            <ul>
-                                                                {% for item in data.exterior_hotspots %}
-                                                                <li>
-                                                                    {{item.name}}
-                                                                </li>
-                                                                {% endfor %}
-                                                                    
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 p-1">
-                                <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal" aria-expanded="true" aria-controls="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal">
-                                    <img height="45" src="{% static 'assets/Interior Options.svg' %}" />
-                                    <br />
-                                    <span class="h6">INTERIOR OPTIONS</span>
-                                </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modalLabel">INTERIOR OPTIONS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  custom-border scrollable">
-                                            <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div id="equipment-adaa57b3-b4e7-46f3-9fa1-7bf38076a06b">
-                                                            <h4>Interior</h4>
-                                                            <ul>
-                                                                {% for item in data.interior_hotspots %}
-                                                                <li>
-                                                                    {{item.name}}
-                                                                </li>
-                                                                {% endfor %}
-                                                                    
-                                                                  
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 p-1">
-                                <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal" aria-expanded="true" aria-controls="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal">
-                                            <img height="45" src="{% static 'assets/Mechanical Options.svg' %}" />
-                                    <br />
-                                    <span class="h6">MECHANICAL OPTIONS</span>
-                                </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modalLabel">MECHANICAL OPTIONS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  custom-border scrollable">
-                                            <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div id="equipment-6ede6ff5-0b34-47b1-9f1e-2f8e9358e305">
-                                                            <h4>Mechanical</h4>
-                                                            <ul>
-                                                                    <li>
-                                                                        100 Amp Alternator
-                                                                    </li>
-                                                                    <li>
-                                                                        11.9 Gal. Fuel Tank
-                                                                    </li>
-                                                                    <li>
-                                                                        5.45 Axle Ratio
-                                                                    </li>
-                                                                    <li>
-                                                                        60-Amp/Hr Maintenance-Free Battery w/Run Down Protection
-                                                                    </li>
-                                                                    <li>
-                                                                        Electric Power-Assist Speed-Sensing Steering
-                                                                    </li>
-                                                                    <li>
-                                                                        Engine: 1.6L DOHC DPI I4 w/CVVT -inc: Dual Continuously Variable Valve Timing (D-CVVT)
-                                                                    </li>
-                                                                    <li>
-                                                                        Front Anti-Roll Bar
-                                                                    </li>
-                                                                    <li>
-                                                                        Front Disc/Rear Drum Brakes w/4-Wheel ABS, Front Vented Discs and Brake Assist
-                                                                    </li>
-                                                                    <li>
-                                                                        Front-wheel drive
-                                                                    </li>
-                                                                    <li>
-                                                                        Gas-Pressurized Shock Absorbers
-                                                                    </li>
-                                                                    <li>
-                                                                        Single Stainless Steel Exhaust
-                                                                    </li>
-                                                                    <li>
-                                                                        Strut Front Suspension w/Coil Springs
-                                                                    </li>
-                                                                    <li>
-                                                                        Torsion Beam Rear Suspension w/Coil Springs
-                                                                    </li>
-                                                                    <li>
-                                                                        Transmission w/Driver Selectable Mode
-                                                                    </li>
-                                                                    <li>
-                                                                        Transmission: Intelligent Variable (IVT) -inc: SHIFTRONIC and Hill Start Assist Control
-                                                                    </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 p-1">
-                                <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal" aria-expanded="true" aria-controls="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal">
-                                    <img height="45" src="{% static 'assets/Safety Options.svg' %}" />
-                                    <br />
-                                    <span class="h6">SAFETY OPTIONS</span>
-                                </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modalLabel">SAFETY OPTIONS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  custom-border scrollable">
-                                            <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div id="equipment-26fce707-1039-44f8-87fa-47e14527d964">
-                                                            <h4>Safety</h4>
-                                                            <ul>
-                                                                {% for item in data.safetyFeatures %}
-                        
-                                                                <li>
-                                                                    {{item}}
-                                                                </li>
+                    <h1 class="h1 vdp-section-title">Specifications</h1>
+                    <div class="row mx-auto w-100">
+                        {% for item in data.fields %}
+                            
+                            <div class="detail-block custom-border"><span class="font-weight-bold detail-title">{{item.key}}:</span> <span class="float-right col"><noanswer>{{item.value}}</noanswer></span></div>
 
-                                                                {% endfor %}
-                                                                  
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 p-1">
-                                <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal" aria-expanded="true" aria-controls="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal">
-                                    <img height="45" src="{% static 'assets/Misc Options.svg' %}" />
-                                    <br />
-                                    <span class="h6">INSTALLED OPTIONS</span>
-                                </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modalLabel">INSTALLED OPTIONS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  custom-border scrollable">
-                                            <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div id="equipment-454371d1-aa13-481c-aeda-4dc4845b43df">
-                                                            <h4>Installed</h4>
-                                                            <ul>
-                                                                    <li>
-                                                                        ADMIRAL BLUE
-                                                                    </li>
-                                                                    <li>
-                                                                        BLACK, CLOTH SEAT TRIM
-                                                                    </li>
-                                                                    <li>
-                                                                        OPTION GROUP 01
-                                                                    </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        {% endfor %}
+                    
                     </div>
                 </div>
             </section>
 
+            {% load static %}
+                <a id="vehicle-equipment" class="vdp-anchor"></a>
+                <section anchor="vehicle-equipment" class="vdp-section vdp-anchor" toc-section="Equipment">
+                    <div class="container">
+                        <h1 class="h1 vdp-section-title">Standard Equipment</h1>
+                        <div class="row mx-auto w-100 justify-content-center">
+                                <div class="col-lg-4 p-1">
+                                    <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal" aria-expanded="true" aria-controls="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal">
+                                        <img height="45" src="{% static 'assets/Options.svg' %}" />
+                                        <br />
+                                        <span class="h6">OPTIONS</span>
+                                    </button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="equipment-dce5adcd-02a0-4015-bbde-4f2e7165d2f3-modalLabel">OPTIONS</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body  custom-border scrollable">
+                                                <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div id="equipment-75165d0b-91b6-4f03-9427-c63070c85df8">
+                                                                <h4>General</h4>
+                                                                <ul>
+                                                                        <li>
+                                                                            A/C
+                                                                        </li>
+                                                                        <li>
+                                                                            ABS
+                                                                        </li>
+                                                                        <li>
+                                                                            Adjustable Steering Wheel
+                                                                        </li>
+                                                                        <li>
+                                                                            ADMIRAL BLUE
+                                                                        </li>
+                                                                        <li>
+                                                                            AM/FM Stereo
+                                                                        </li>
+                                                                        <li>
+                                                                            Automatic Headlights
+                                                                        </li>
+                                                                        <li>
+                                                                            Auxiliary Audio Input
+                                                                        </li>
+                                                                        <li>
+                                                                            Back-Up Camera
+                                                                        </li>
+                                                                        <li>
+                                                                            BLACK  CLOTH SEAT TRIM
+                                                                        </li>
+                                                                        <li>
+                                                                            Bluetooth Connection
+                                                                        </li>
+                                                                        <li>
+                                                                            Brake Assist
+                                                                        </li>
+                                                                        <li>
+                                                                            Bucket Seats
+                                                                        </li>
+                                                                        <li>
+                                                                            Child Safety Locks
+                                                                        </li>
+                                                                        <li>
+                                                                            Cloth Seats
+                                                                        </li>
+                                                                        <li>
+                                                                            Cruise Control
+                                                                        </li>
+                                                                        <li>
+                                                                            Driver Air Bag
+                                                                        </li>
+                                                                        <li>
+                                                                            Driver Vanity Mirror
+                                                                        </li>
+                                                                        <li>
+                                                                            Front Disc/Rear Drum Brakes
+                                                                        </li>
+                                                                        <li>
+                                                                            Front Head Air Bag
+                                                                        </li>
+                                                                        <li>
+                                                                            Front Side Air Bag
+                                                                        </li>
+                                                                        <li>
+                                                                            Front Wheel Drive
+                                                                        </li>
+                                                                        <li>
+                                                                            Intermittent Wipers
+                                                                        </li>
+                                                                        <li>
+                                                                            Keyless Entry
+                                                                        </li>
+                                                                        <li>
+                                                                            MP3 Player
+                                                                        </li>
+                                                                        <li>
+                                                                            OPTION GROUP 01
+                                                                        </li>
+                                                                        <li>
+                                                                            Passenger Air Bag
+                                                                        </li>
+                                                                        <li>
+                                                                            Passenger Air Bag Sensor
+                                                                        </li>
+                                                                        <li>
+                                                                            Passenger Vanity Mirror
+                                                                        </li>
+                                                                        <li>
+                                                                            Pass-Through Rear Seat
+                                                                        </li>
+                                                                        <li>
+                                                                            Power Door Locks
+                                                                        </li>
+                                                                        <li>
+                                                                            Power Mirror(s)
+                                                                        </li>
+                                                                        <li>
+                                                                            Power Steering
+                                                                        </li>
+                                                                        <li>
+                                                                            Power Windows
+                                                                        </li>
+                                                                        <li>
+                                                                            Rear Bench Seat
+                                                                        </li>
+                                                                        <li>
+                                                                            Rear Defrost
+                                                                        </li>
+                                                                        <li>
+                                                                            Rear Head Air Bag
+                                                                        </li>
+                                                                        <li>
+                                                                            Remote Trunk Release
+                                                                        </li>
+                                                                        <li>
+                                                                            Security System
+                                                                        </li>
+                                                                        <li>
+                                                                            Stability Control
+                                                                        </li>
+                                                                        <li>
+                                                                            Steel Wheels
+                                                                        </li>
+                                                                        <li>
+                                                                            Steering Wheel Audio Controls
+                                                                        </li>
+                                                                        <li>
+                                                                            Temporary Spare Tire
+                                                                        </li>
+                                                                        <li>
+                                                                            Tire Pressure Monitor
+                                                                        </li>
+                                                                        <li>
+                                                                            Tires - Front All-Season
+                                                                        </li>
+                                                                        <li>
+                                                                            Tires - Rear All-Season
+                                                                        </li>
+                                                                        <li>
+                                                                            Traction Control
+                                                                        </li>
+                                                                        <li>
+                                                                            Trip Computer
+                                                                        </li>
+                                                                        <li>
+                                                                            Wheel Covers
+                                                                        </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-1">
+                                    <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal" aria-expanded="true" aria-controls="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal">
+                                        <img height="45" src="{% static 'assets/Exterior Options.svg' %}" />
+                                        <br />
+                                        <span class="h6">EXTERIOR OPTIONS</span>
+                                    </button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="equipment-b94b2285-6fcf-44f4-a1d3-76ad96aa7f9d-modalLabel">EXTERIOR OPTIONS</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body  custom-border scrollable">
+                                                <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div id="equipment-eaf7ae63-efb1-401d-9d7f-d5963b82aed7">
+                                                                <h4>Exterior</h4>
+                                                                <ul>
+                                                                    {% for item in data.exterior_hotspots %}
+                                                                    <li>
+                                                                        {{item.name}}
+                                                                    </li>
+                                                                    {% endfor %}
+                                                                        
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-1">
+                                    <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal" aria-expanded="true" aria-controls="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal">
+                                        <img height="45" src="{% static 'assets/Interior Options.svg' %}" />
+                                        <br />
+                                        <span class="h6">INTERIOR OPTIONS</span>
+                                    </button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="equipment-91ccaf26-9628-4ff1-9c69-f0e75d59edac-modalLabel">INTERIOR OPTIONS</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body  custom-border scrollable">
+                                                <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div id="equipment-adaa57b3-b4e7-46f3-9fa1-7bf38076a06b">
+                                                                <h4>Interior</h4>
+                                                                <ul>
+                                                                    {% for item in data.interior_hotspots %}
+                                                                    <li>
+                                                                        {{item.name}}
+                                                                    </li>
+                                                                    {% endfor %}
+                                                                        
+                                                                    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-1">
+                                    <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal" aria-expanded="true" aria-controls="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal">
+                                                <img height="45" src="{% static 'assets/Mechanical Options.svg' %}" />
+                                        <br />
+                                        <span class="h6">MECHANICAL OPTIONS</span>
+                                    </button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="equipment-c8a94a56-3321-4c46-ad77-52bac7e909be-modalLabel">MECHANICAL OPTIONS</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body  custom-border scrollable">
+                                                <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div id="equipment-6ede6ff5-0b34-47b1-9f1e-2f8e9358e305">
+                                                                <h4>Mechanical</h4>
+                                                                <ul>
+                                                                        <li>
+                                                                            100 Amp Alternator
+                                                                        </li>
+                                                                        <li>
+                                                                            11.9 Gal. Fuel Tank
+                                                                        </li>
+                                                                        <li>
+                                                                            5.45 Axle Ratio
+                                                                        </li>
+                                                                        <li>
+                                                                            60-Amp/Hr Maintenance-Free Battery w/Run Down Protection
+                                                                        </li>
+                                                                        <li>
+                                                                            Electric Power-Assist Speed-Sensing Steering
+                                                                        </li>
+                                                                        <li>
+                                                                            Engine: 1.6L DOHC DPI I4 w/CVVT -inc: Dual Continuously Variable Valve Timing (D-CVVT)
+                                                                        </li>
+                                                                        <li>
+                                                                            Front Anti-Roll Bar
+                                                                        </li>
+                                                                        <li>
+                                                                            Front Disc/Rear Drum Brakes w/4-Wheel ABS, Front Vented Discs and Brake Assist
+                                                                        </li>
+                                                                        <li>
+                                                                            Front-wheel drive
+                                                                        </li>
+                                                                        <li>
+                                                                            Gas-Pressurized Shock Absorbers
+                                                                        </li>
+                                                                        <li>
+                                                                            Single Stainless Steel Exhaust
+                                                                        </li>
+                                                                        <li>
+                                                                            Strut Front Suspension w/Coil Springs
+                                                                        </li>
+                                                                        <li>
+                                                                            Torsion Beam Rear Suspension w/Coil Springs
+                                                                        </li>
+                                                                        <li>
+                                                                            Transmission w/Driver Selectable Mode
+                                                                        </li>
+                                                                        <li>
+                                                                            Transmission: Intelligent Variable (IVT) -inc: SHIFTRONIC and Hill Start Assist Control
+                                                                        </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-1">
+                                    <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal" aria-expanded="true" aria-controls="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal">
+                                        <img height="45" src="{% static 'assets/Safety Options.svg' %}" />
+                                        <br />
+                                        <span class="h6">SAFETY OPTIONS</span>
+                                    </button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="equipment-50a183ff-06cc-46e3-90be-029d101c7b38-modalLabel">SAFETY OPTIONS</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body  custom-border scrollable">
+                                                <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div id="equipment-26fce707-1039-44f8-87fa-47e14527d964">
+                                                                <h4>Safety</h4>
+                                                                <ul>
+                                                                    {% for item in data.safetyFeatures %}
+                            
+                                                                    <li>
+                                                                        {{item}}
+                                                                    </li>
 
+                                                                    {% endfor %}
+                                                                    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-1">
+                                    <button class="btn-shadow text-center btn btn-block" data-toggle="modal" data-target="#equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal" aria-expanded="true" aria-controls="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal">
+                                        <img height="45" src="{% static 'assets/Misc Options.svg' %}" />
+                                        <br />
+                                        <span class="h6">INSTALLED OPTIONS</span>
+                                    </button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modal" tabindex="-1" role="dialog" aria-labelledby="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="equipment-233b35cd-4798-4dd5-8083-d9111d951136-modalLabel">INSTALLED OPTIONS</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body  custom-border scrollable">
+                                                <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div id="equipment-454371d1-aa13-481c-aeda-4dc4845b43df">
+                                                                <h4>Installed</h4>
+                                                                <ul>
+                                                                        <li>
+                                                                            ADMIRAL BLUE
+                                                                        </li>
+                                                                        <li>
+                                                                            BLACK, CLOTH SEAT TRIM
+                                                                        </li>
+                                                                        <li>
+                                                                            OPTION GROUP 01
+                                                                        </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </section>
+
+
+        </div>
+
+        <div class="container mb-3">
+            <small style="font-size: 11px"><strong>Disclaimers *At Certified AutoBrokers</strong>, the majority of our vehicles are purchased as new car trade-ins. Each vehicle goes through a top-tier detail and multi-point certification process to be deemed "Certified Pre-Owned" vehicles. We also replace any wearable items that are beyond 50% worn. This means, when you buy a car from us, you can be assured that you won't need new brake pads in 3 months or new tires for the winter. All of the cars we make available for sale are New York State inspected and in top condition. Our Certification ensures our vehicles operate at a higher standard, from being reconditioned and repaired to a higher standard, for you, the customer. If for any reason you are unhappy with your purchase within 3 days and/or 300 miles we will swap out your vehicle. No questions asked. Our goal is to provide you with a purchasing experience you can count on (See "3 Day Exchange" on our website for details). Free Express Shipping is for customers within 300 miles, vehicles to be shipped farther will be quoted upon request. *Vehicle prices are clearly marked online less applicable sales tax, state Tag & Title Fee, and any out of state applicable fees. Price might be subject to human error on entry. Delivery transport charges are not included in the sales price of the vehicle. With approved credit. Terms may vary. Monthly payments are only estimates derived from the vehicle price with a 72 month term, 4.99% interest and $2000 downpayment. *Vehicle options and details might be subject to human error on entry. Use for comparison purposes only. Please confirm actual details and options with Certified AutoBrokers. While every reasonable effort is made to ensure the accuracy of this information, we are not responsible for any errors or omissions contained on these pages. *Fuel Economy based on EPA mileage ratings. Use for comparison purposes only. Your actual mileage will vary depending on how you drive and maintain your vehicle.</small>
+        </div>
     </div>
-
-    <div class="container mb-3">
-        <small style="font-size: 11px"><strong>Disclaimers *At Certified AutoBrokers</strong>, the majority of our vehicles are purchased as new car trade-ins. Each vehicle goes through a top-tier detail and multi-point certification process to be deemed "Certified Pre-Owned" vehicles. We also replace any wearable items that are beyond 50% worn. This means, when you buy a car from us, you can be assured that you won't need new brake pads in 3 months or new tires for the winter. All of the cars we make available for sale are New York State inspected and in top condition. Our Certification ensures our vehicles operate at a higher standard, from being reconditioned and repaired to a higher standard, for you, the customer. If for any reason you are unhappy with your purchase within 3 days and/or 300 miles we will swap out your vehicle. No questions asked. Our goal is to provide you with a purchasing experience you can count on (See "3 Day Exchange" on our website for details). Free Express Shipping is for customers within 300 miles, vehicles to be shipped farther will be quoted upon request. *Vehicle prices are clearly marked online less applicable sales tax, state Tag & Title Fee, and any out of state applicable fees. Price might be subject to human error on entry. Delivery transport charges are not included in the sales price of the vehicle. With approved credit. Terms may vary. Monthly payments are only estimates derived from the vehicle price with a 72 month term, 4.99% interest and $2000 downpayment. *Vehicle options and details might be subject to human error on entry. Use for comparison purposes only. Please confirm actual details and options with Certified AutoBrokers. While every reasonable effort is made to ensure the accuracy of this information, we are not responsible for any errors or omissions contained on these pages. *Fuel Economy based on EPA mileage ratings. Use for comparison purposes only. Your actual mileage will vary depending on how you drive and maintain your vehicle.</small>
-    </div>
-</div>
-
+</main>
 
 {% endblock content %}
