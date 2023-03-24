@@ -1,4 +1,3 @@
-import json
 from django import template
 
 from django.template.defaultfilters import stringfilter
@@ -11,17 +10,32 @@ def get_item(dictionary, key):
     if dictionary.get(key) == 'doors':
         return dictionary.get(key)
 
+@register.simple_tag(takes_context=True)
+def set_global_context(context, key, value):
+    """
+    Sets a value to the global template context, so it can
+    be accessible across blocks.
+
+    Note that the block where the global context variable is set must appear
+    before the other blocks using the variable IN THE BASE TEMPLATE.  The order
+    of the blocks in the extending template is not important. 
+
+    Usage::
+        {% extends 'base.html' %}
+
+        {% block first %}
+            {% set_global_context 'foo' 'bar' %}
+        {% endblock %}
+
+        {% block second %}
+            {{ foo }}
+        {% endblock %}
+    """
+    context.dicts[0][key] = value
+    return ''
 
  
  
- 
-@register.filter(name='jsonify')
-def jsonify(data):
-    if isinstance(data, dict):
-        return data
-    else:
-        return json.loads(data)
-
 
 @register.filter(name='get_data')
 def get_data(data, key, value):
@@ -31,20 +45,6 @@ def get_data(data, key, value):
         return ''
 
 
-
-@register.filter(needs_autoescape=True)
-
-@stringfilter
-
-def letter_count(value, letter, autoescape=True):
-
-    if value == letter:
-        # value = conditional_escape(value)
-        result = (
-            f'<span class="vehicle-result-title">{value} 2019</span>'
-        )
-
-        return mark_safe(result)
 
     
 

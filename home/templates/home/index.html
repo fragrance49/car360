@@ -206,60 +206,52 @@
                       
                         <!--template tag (in the template)-->
                             
+                       
+                        {% for item in data.fields %}
+                            {% if 'make' in item.key %}   
+                                {% set_global_context 'make' item.value %}
+                            {% elif 'model' in item.key %}
+                                {% set_global_context 'model' item.value %}
+                            {% elif 'year' in item.key %}
+                                {% set_global_context 'year' item.value %}
+                            {% elif 'price' in item.key %}
+                                {% set_global_context 'price' item.value %}
+                            {% elif 'interior_color' in item.key %}
+                                {% set_global_context 'interior_color' item.value %}
+                            {% elif 'mileage' in item.key %}
+                                {% set_global_context 'mileage' item.value %}
+                           
+                            {% endif %}  
+
+                            
+                        {% endfor %}
+
                         <div class="card-body p-2">
                             <div class="row w-100 mx-auto details p-0">
                         
                                 <div class="p-0">
-                                    {% for item in data.fields %}
-                                        {% if 'make' in item.key %}  
-                                        <span class="vehicle-result-title">
-                                            {{item.value}}
-                                          
-                                        </span>
-                                        {% elif 'model' in item.key %}
-                                        <span class="vehicle-result-model text-secondary">   {{item.value}}</span>
-                                        {% endif %}  
-                                    
-                                    {% endfor %}
-                                  
+                                    <span class="vehicle-result-title">{{make}} {{year}}</span>
+                                    <span class="vehicle-result-model text-secondary">{{model}}</span>
                                 </div>
-
                                 <div class="p-0 text-right mb-2">
-                                    {% for item in data.fields %}
-                                        {% if 'price' in item.key %} 
-                                        <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">${{item.value}}</span>
-                                        {% elif 'mileage' in item.key %}
-                                        <span class="d-block vehicle-result-miles">{{item.value}}</span>
-                                        {% endif %}
-                                    {% endfor %}
-                                    <!-- <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">$31,933</span>
-                                    <span class="d-block vehicle-result-miles">33,249 miles</span> -->
+                                    <span class="d-block vehicle-result-price price " data-target="#vehicle-1338">$ {{price}}</span>
+                                    <span class="d-block vehicle-result-miles">{{mileage}}</span>
                                 </div>
                                 <div class="col-12 p-0 more">
-                                    {% for item in data.fields %}
-                                        {% if 'seating' in item.key %} 
-                                        <span class="vehicle-result-vin">seating: {{item.value}}</span>
-                                        {% elif 'interior_color' in item.key %}
-                                        <span class="vehicle-result-color"><span class="color-sample" style="background: {{item.value}}"></span>{{item.value}} interior</span>
-                                        {% endif %}
-                                    {% endfor %}
-                                    <!-- <span class="vehicle-result-vin">Stock: 5429P</span>
-                                    <span class="vehicle-result-color"><span class="color-sample" style="background: #000"></span>Black interior</span> -->
+                                    <span class="vehicle-result-vin">Stock:</span>
+                                    <span class="vehicle-result-color"><span class="color-sample" style="background: {{interior_color}}"></span>{{interior_color}}</span>
                                 </div>
                         
                         
                             </div>
                         </div>
-
+                        
                      
                          
                         <div class="card-footer d-flex align-items-center d-inline">
-                            <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>
-                            {% for item in data.fields %}
-                                {% if 'price' in item.key %} 
-                                <span class="estimated-payment w-100">Estimated Payment: <span class="price float-right">$<span class="value" data-principal="{{item.value}}">30</span>/mo</span></span>
-                                {% endif %}
-                            {% endfor %}
+                            <button class="btn btn-sm btn-link mr-2 p-0" data-toggle="modal" data-target="#estimatedPaymentModal"><i class="fas fa-pencil-alt"></i></button>                            
+                            <span class="estimated-payment w-100">Estimated Payment: <span class="price float-right">$<span class="value" data-principal="0"></span>/mo</span></span>
+                               
                         </div>
                            
                 
