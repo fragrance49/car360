@@ -24,23 +24,9 @@ def home(request):
     context ={}
     context["dataset"] = Blog.objects.all() 
     context['datafields'] = Blog.objects.values_list('fields', flat=True)
-    global make_arr
-    global model_arr
-    make_arr = []
-    model_arr = []
-    global messages
-    messages = []
 
-    # if len(context["datafields"] ) != 0:
-    #     for x in context["datafields"] :
-    #         # print(x)
-    #         if x[0].key == 'make':
-    #             make_arr.append(x)
-    #         elif x[0].key == 'model':
-    #             model_arr.append(x)
-    #         else:
-    #             pass
-    # print(make_arr)
+    
+    
     return render(request, 'home/index.html', context)
     # return render(request, 'home/index.html', {})
 

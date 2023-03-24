@@ -1,3 +1,4 @@
+import json
 from django import template
 
 from django.template.defaultfilters import stringfilter
@@ -9,6 +10,26 @@ register = template.Library()
 def get_item(dictionary, key):
     if dictionary.get(key) == 'doors':
         return dictionary.get(key)
+
+
+ 
+ 
+ 
+@register.filter(name='jsonify')
+def jsonify(data):
+    if isinstance(data, dict):
+        return data
+    else:
+        return json.loads(data)
+
+
+@register.filter(name='get_data')
+def get_data(data, key, value):
+    if data.get(key) == 'make':
+        return data.get(value)
+    else:
+        return ''
+
 
 
 @register.filter(needs_autoescape=True)
@@ -25,10 +46,6 @@ def letter_count(value, letter, autoescape=True):
 
         return mark_safe(result)
 
-@register.filter(name='get_citem')
-def get_citem(dictionary,key):
-    if dictionary.get(key) == 'doors':
-        return dictionary
     
 
 @register.simple_tag
@@ -53,12 +70,4 @@ def color(value):
 
     
 
-# A function that sets returns the number of contacts.
-@register.simple_tag(name='my_contacts')
-def my_contacts():
-    return Contact.objects.all().count()
 
-# A function that sets returns the current date.
-@register.simple_tag(name='current_date')
-def current_date(format):
-    return datetime.datetime.now().strftime(format)
