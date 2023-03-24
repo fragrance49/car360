@@ -86,109 +86,7 @@
             </div>
         </div>
     </div>
-    <!-- Desktop side bar menu -->
-    <div class="menu-sidebar" style="margin-top: 90px;">
-        <div class="menu-filters">
-            <div data-year-sidebar class="filter-group my-1 card w-100">
-                <div class="year-filter mx-3 my-1">
-                    <label class="mb-2">Year</label>
-                    <div id="yearSlider"></div>
-                    <span data-start-year-counter class="float-left"></span>
-                    <span data-end-year-counter class="float-right"></span>
-                </div>
-            </div>
-            <div data-price-sidebar class="filter-group my-1 card w-100">
-                <div class="price-filter mx-3 my-1">
-                    <label class="mb-2">Price</label>
-                    <div id="priceSlider"></div>
-                    <span data-start-price-counter class="float-left"></span>
-                    <span data-end-price-counter class="float-right"></span>
-                </div>
-            </div>
-            <div data-mile-sidebar class="filter-group my-1 card w-100">
-                <div class="mile-filter mx-3 my-1">
-                    <label class="mb-2">Miles</label>
-                    <div id="mileSlider"></div>
-                    <span data-start-mile-counter class="float-left"></span>
-                    <span data-end-mile-counter class="float-right"></span>
-                </div>
-            </div>
-            <div class="toggle-filters">
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-make-menu]">
-                        Makes
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-type-menu]">
-                        Body
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-model-menu]">
-                        Models
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-drivetrain-menu]">
-                        Drive Trains
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-fuel-menu]">
-                        Fuel Types
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-extcolor-menu]">
-                        Ext. Color
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-keyfeatures-menu]">
-                        Key Features
-                    </button>
-                </div>
-                <div data-hide-in-mobile-mode class="filter-group">
-                    <button class="btn btn-block"
-                            data-independent="true"
-                            data-toggle="modal"
-                            data-target="#filterModal"
-                            data-menu-target="[data-tag-menu]">
-                        Tags
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     {% load home_extras %}
     <!-- Vehicle results area -->
     <div class="main vehicle-area">
@@ -239,7 +137,7 @@
                                 </div>
                                 <div class="col-12 p-0 more">
                                     <span class="vehicle-result-vin">Stock:</span>
-                                    <span class="vehicle-result-color"><span class="color-sample" style="background: {{interior_color}}"></span>{{interior_color}}</span>
+                                    <span class="vehicle-result-color"><span class="color-sample" style="background: {{interior_color}}"></span>{{interior_color}} Interior</span>
                                 </div>
                         
                         
