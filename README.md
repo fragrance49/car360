@@ -1,33 +1,10 @@
-# [Django AdminLTE](https://appseed.us/product/adminlte/django/)
-
-Open-source **Django** project crafted on top of **[AdminLTE](https://appseed.us/product/adminlte/django/)**, an open-source and iconic `Bootstrap` design.
-The product is designed to deliver the best possible user experience with highly customizable feature-rich pages. 
-
-- 👉 [Django AdminLTE](https://appseed.us/product/adminlte/django/) - `Product page`
-- 👉 [Django AdminLTE](https://adminlte-django.appseed-srv1.com/) - `LIVE Demo`
-- ✅ [Django AdminLTE](https://www.youtube.com/watch?v=efLwn5dC7Qo) - `Video Presentation`
-
-<br />
-
-> Features: 
-
-- ✅ `Up-to-date Dependencies`
-- ✅ Theme: [Django AdminLTE](https://github.com/app-generator/django-admin-adminlte) `v3.2.0`
-- ✅ **Authentication**: `Django.contrib.AUTH`, Registration
-- 🚀 `Deployment` 
-  - `CI/CD` flow via `Render`
-
-<br />
-
-<br />
-
 ## Start the app in Docker
 
 > 👉 **Step 1** - Download the code from the GH repository (using `GIT`)
 
 ```bash
-$ git clone https://github.com/app-generator/django-adminlte.git
-$ cd django-adminlte
+$ git clone https://github.com/yanahonchar/car360.git
+$ cd car360
 ```
 
 > 👉 **Step 2** - Start the APP in `Docker`
