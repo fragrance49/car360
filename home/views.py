@@ -72,12 +72,8 @@ def Apicall(request):
 
 
 def perutest(request):
-    #pull data from third party rest api
-    response = requests.get('https://apps5.mineco.gob.pe/transparencia/Navegador/Navegar_7.aspx')
-    #convert reponse data into json
-    users = response.json()
-    # print(users)
-    return render(request, "home/perutest.html", {'data': users})
+    
+    return render(request, "home/perutest.html", {})
     pass
 
 

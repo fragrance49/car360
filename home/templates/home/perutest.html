@@ -1,1 +1,52 @@
-{{data}}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Like Post App</title>
+</head>
+<body>
+
+{% block title %} Service Department | Certified AutoBrokers {% endblock title %}
+
+{% block stylesheets %}
+    <style>
+           
+        
+    </style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+this is peru test page!!!
+<a class="likebuttons" id="like" href="#" >Like</a>
+
+{% endblock content %}
+
+
+{% block script %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.asd').click(function(){
+        console.log("click");
+       
+    });
+</script>
+<script type="text/javascript">
+    $('.likebuttons').click(function(){
+        console.log("click");
+        $.ajax(
+        {
+            type:"POST",
+            url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx",
+            data:{
+                    
+            },
+            success: function( data ) 
+            {
+                console.log(data);
+            }
+        })
+    });
+</script>
+{% endblock %}
+</body>
+</html>
