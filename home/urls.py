@@ -6,6 +6,7 @@ urlpatterns = [
     # path('', views.index, name='index'),
     path('', views.home, name='home'),
     path('test', views.test, name='test'),
+    path('perutest', views.perutest, name='perutest'),
     path('Apicall',views.Apicall,name="Apicall"),
     path('Vehicles', views.home, name='home'),
     path('details/<str:pk>', views.details, name='details'),
