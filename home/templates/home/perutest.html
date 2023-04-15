@@ -36,7 +36,10 @@ this is peru test page!!!
         $.ajax(
         {
             type:"POST",
-            url: "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx",
+            crossDomain: true,
+            dataType: 'jsonp',
+            // "Access-Control-Allow-Origin": "*",
+            url: "https://apps5.mineco.gob.pe/transparencia/Navegador/Navegar_7.aspx",
             data:{
                     
             },
@@ -46,6 +49,7 @@ this is peru test page!!!
             }
         })
     });
+
 </script>
 {% endblock %}
 </body>
